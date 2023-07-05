@@ -1,0 +1,90 @@
+when customer/client want to implement ML alorithm to indentify the various problems on this requiremenet.
+so first thing identify the data source and data collection. Once we confortable with avaialable data we can start work on rest of the ML process/model.
+firstly i have to undersatandthe business requirement , second understanding the data ,after that data prepartion ,modelling,evaluation and deployment.
+we know that the collwcting the data from various sources and in diffrent formates such as csv,json,excle etc but datais not always avaialable in desired formate so that various processings are required before analysing the data .
+
+so, EDA process is very important it is one the major step to fine tune of the given dataset in a different forms to unserstand the insight of the given data ,to understand the characteristics of various entities of the dataset like columns ,rows using pandas and numpy and for visualization purpose we use the matplotlib and seaborn.
+
+After that Once data is prepared. Understanding the given dataset and it help me to give me the clear picture of the features and relationship betweenthem providing guidlines for the essential variables.
+
+Handling missing values,identify the outliers,EDA process would be maximise the insight of the data. The process is time consuming but very effective. After that deploye the model to create the web service or predictions.
+
+First step isto create the ML model ---we have to train the data after that evaluate its performance.
+we know that first we train the data on the basis of training data and then test it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.edureka.co/blog/interview-questions/python-interview-questions/
+
+
+
+1) django-admin startproject  project_name
+django-admin startproject  firstproject
+cd firstproject
+
+2) py manage.py startapp app_name
+py manage.py startapp testapp
+
+3)Register your app in settings of projects
+
+4)Create views for our application to provide required functionality inside views.py file, which is present in our application.
+
+1. Function Based Views(FBVs)
+ 2. Class Based Views(CBVs)
+
+ 1. Function Based Views(FBVs)
+-------------------------------
+We have to define view function which is responsible to provide required response to the end user.
+
+from django.http import HttpResponse
+# Create your views here.
+def display(request):
+    s = '<h1>Welcome to DURGA django classes...purely Nursely level classes</h1>'
+    return HttpResponse(s)
+
+5)Define url-pattern for our view function inside urls.py:
+--------------------------------------------------------
+from django.contrib import admin
+from django.urls import path
+from testapp import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('hello/', views.display),
+]
+
+6) start server
+py manage.py runserver
